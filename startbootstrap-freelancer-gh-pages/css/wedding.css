@@ -1,0 +1,20 @@
+/* Navigation */
+
+#nav-logo {
+  width: 78px;
+}
+
+#navbar-menu-mobile{
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+/* Jumbotron */
+
+#jumbotron-image {
+    background: url(assets/img/K+J_img/K+J-50.jpg) center no-repeat;
+    background-size: cover;
+}

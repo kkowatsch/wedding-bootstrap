@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&family=Bodoni+Moda:wght@400;500;600;700&display=swap');
 
-/* General Rules */
 :root {
   /* Colours */
   --sunflower-yellow: #ffcc33;
@@ -13,36 +12,21 @@
   --fw-semibold: 600;
   --fw-normal: normal;
   /* Font Size */
-  --fs-h3: calc(26px + (48 - 26) * ((100vw - 300px) / (1600 - 300)));
-}
-
-body, html {
-  font-family: 'Bodoni Moda', serif;
-  font-size: 1em;
-  font-weight: var(--fw-normal);
-  color: var(--navy);
-}
-
-.bg-navy {
-  background-color: var(--navy);
-}
-
-.section-centered {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  flex-direction: column;
+  --fs-h1: calc(26px + (48 - 26) * ((100vw - 300px) / (1600 - 300)));
+  --fs-h2: calc(24px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
+  --fs-h3: calc(22px + (28 - 22) * ((100vw - 300px) / (1600 - 300)));
+  --fs-h4: calc(20px + (24 - 20) * ((100vw - 300px) / (1600 - 300)));
+  --fs-h5: calc(18px + (20 - 18) * ((100vw - 300px) / (1600 - 300)));
 }
 
 /* Font Rules */
 h1 {
-  font-size: calc(26px + (48 - 26) * ((100vw - 300px) / (1600 - 300)));
+  font-size: var(--fs-h1);
   font-weight: var(--fw-bold);
 }
 
 h2 {
-  font-size: calc(24px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
+  font-size: var(--fs-h2);
   font-weight: var(--fw-bold);
 }
 
@@ -52,12 +36,12 @@ h3 {
 }
 
 h4 {
-  font-size: calc(20px + (24 - 20) * ((100vw - 300px) / (1600 - 300)));
+  font-size: var(--fs-h4);
   font-weight: var(--fw-semibold);
 }
 
 h5 {
-  font-size: calc(18px + (20 - 18) * ((100vw - 300px) / (1600 - 300)));
+  font-size: var(--fs-h5);
   font-weight: var(--fw-semibold);
 }
 
@@ -66,7 +50,50 @@ h6 {
   font-weight: var(--fw-semibold);
 }
 
+/* General Rules */
+body, html {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1em;
+  font-weight: var(--fw-normal);
+  color: var(--navy);
+  line-height: 1.25rem;
+}
+
+a {
+  color: var(--bs-white);
+}
+
+.bg-navy {
+  background-color: var(--navy);
+  color: var(--bs-white)
+}
+
+.section-centered {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+}
+
+.container-padding {
+  padding: 0 60px;
+}
+
 /* Navigation */
+.navigation-wrapper {
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#mainNav.navbar-shrink{
+   background-color: var(--navy);
+}
+
 #nav-logo {
   width: 78px;
 }
@@ -77,6 +104,15 @@ h6 {
   border: none;
   font-size: 1.25rem;
   line-height: 1;
+}
+
+.nav-link {
+  color: var(--bs-white);
+  font-weight: var(--fw-bold);
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: var(--rose-gold);
 }
 
 /* Jumbotron */
@@ -91,12 +127,15 @@ h6 {
 #jumbotron-intro-name {
   font-family: 'Birthstone Bounce', cursive;
   color: var(--sunflower-yellow);
-  font-size: calc(26px + (100 - 26) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(60px + (100 - 60) * ((100vw - 300px) / (1600 - 300)));
   font-weight: 500;
 }
 
-#jumbotron-intro-title {
-  color: var(--bs-white);
-  font-size: var(--fs-h3);
+.jumbotron-support-desc {
+  font-weight: var(--fw-bold);
   text-transform: uppercase;
+}
+
+#jumbotron-intro-title {
+  font-size: var(--fs-h3);
 }

@@ -1,10 +1,77 @@
-/* Navigation */
+@import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&family=Bodoni+Moda:wght@400;500;600;700&display=swap');
 
+/* General Rules */
+:root {
+  /* Colours */
+  --sunflower-yellow: #ffcc33;
+  --rose-gold: #b76e79;
+  --burgundy: #5d0b09;
+  --navy: #002855;
+  /* Fonts */
+  /* Font Weight */
+  --fw-bold: 700;
+  --fw-semibold: 600;
+  --fw-normal: normal;
+  /* Font Size */
+  --fs-h3: calc(26px + (48 - 26) * ((100vw - 300px) / (1600 - 300)));
+}
+
+body, html {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1em;
+  font-weight: var(--fw-normal);
+  color: var(--navy);
+}
+
+.bg-navy {
+  background-color: var(--navy);
+}
+
+.section-centered {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Font Rules */
+h1 {
+  font-size: calc(26px + (48 - 26) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: var(--fw-bold);
+}
+
+h2 {
+  font-size: calc(24px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: var(--fw-bold);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semibold);
+}
+
+h4 {
+  font-size: calc(20px + (24 - 20) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: var(--fw-semibold);
+}
+
+h5 {
+  font-size: calc(18px + (20 - 18) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: var(--fw-semibold);
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: var(--fw-semibold);
+}
+
+/* Navigation */
 #nav-logo {
   width: 78px;
 }
 
-#navbar-menu-mobile{
+#navbar-menu-mobile {
   color: #ffffff;
   background-color: transparent;
   border: none;
@@ -13,8 +80,23 @@
 }
 
 /* Jumbotron */
+.jumbotron-image {
+  background-image: url(assets/img/portfolio/cabin.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
 
-#jumbotron-image {
-    background: url(assets/img/K+J_img/K+J-50.jpg) center no-repeat;
-    background-size: cover;
+#jumbotron-intro-name {
+  font-family: 'Birthstone Bounce', cursive;
+  color: var(--sunflower-yellow);
+  font-size: calc(26px + (100 - 26) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: 500;
+}
+
+#jumbotron-intro-title {
+  color: var(--bs-white);
+  font-size: var(--fs-h3);
+  text-transform: uppercase;
 }

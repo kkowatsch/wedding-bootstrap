@@ -37,6 +37,7 @@ h2 {
 h3 {
   font-size: var(--fs-h3);
   font-weight: var(--fw-semibold);
+  border-bottom: 3px solid var(--sunflower-yellow);
 }
 
 h4 {
@@ -72,7 +73,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: var(--bs-white);
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--rose-gold);
 }
 
 .bg-navy {
@@ -104,6 +111,12 @@ a {
 
 .grid {
   display: grid;
+}
+
+.no-style-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 /* Navigation */
@@ -246,11 +259,6 @@ a {
   text-align: left;
 }
 
-.tab-content .tab-title {
-  border-bottom: 2px solid var(--sunflower-yellow);
-  max-width: 6.5em;
-}
-
 .tab-content ul {
   margin: 0;
   padding: 0;
@@ -262,4 +270,33 @@ a {
   grid-template-columns: 2fr 1fr;
   border: 0.5px solid #eee;
   box-shadow: 0 3px 6px #eee;
+}
+
+/* Where to Stay */
+#hotel-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.info-list {
+  text-indent: -8px;
+  margin-left: 14px;
+}
+
+.hotel-link {
+  width: 12.5em;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../assets/img/K+J/K+J-96.jpg");
+
+  /* Set a specific height */
+  min-height: 400px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

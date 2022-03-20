@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&family=Bodoni+Moda:wght@400;500;600;700&display=swap');
 
 :root {
+  --border: 0.5px solid;
+  --df-rl-padding: 20px;
+  --df-tb-padding: 40px;
   /* Colours */
   --sunflower-yellow: #ffcc33;
   --rose-gold: #b76e79;
   --burgundy: #5d0b09;
   --navy: #002855;
   /* Fonts */
+  --font-family: 'Bodoni 72', serif;
   /* Font Weight */
   --fw-bold: 700;
   --fw-semibold: 600;
@@ -52,11 +56,19 @@ h6 {
 
 /* General Rules */
 body, html {
-  font-family: 'Bodoni Moda', serif;
+  font-family: var(--font-family);
   font-size: 1em;
   font-weight: var(--fw-normal);
   color: var(--navy);
   line-height: 1.25rem;
+}
+
+h1, h2 {
+  padding-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
 }
 
 a {
@@ -80,22 +92,45 @@ a {
 }
 
 .container-padding {
-  padding: 0 60px;
+  padding-left: var(--df-rl-padding);
+  padding-right: var(--df-rl-padding);
+}
+
+.inside-section {
+  padding: var(--df-tb-padding) var(--df-rl-padding);
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.grid {
+  display: grid;
 }
 
 /* Navigation */
 .navigation-wrapper {
   flex-wrap: inherit;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
+  border-bottom: var(--border) var(--bs-white);
+  margin-left: var(--df-rl-padding);
+  margin-right: var(--df-rl-padding);
+  padding-bottom: 10px;
 }
 
-#mainNav.navbar-shrink{
-   background-color: var(--navy);
+#mainNav {
+  font-family: var(--font-family);
+}
+
+#mainNav.navbar-shrink {
+  background-color: var(--navy);
+}
+
+#mainNav.navbar-shrink .navigation-wrapper {
+  border-bottom: none;
 }
 
 #nav-logo {
-  width: 78px;
+  width: 2.5em;
 }
 
 #navbar-menu-mobile {
@@ -109,15 +144,22 @@ a {
 .nav-link {
   color: var(--bs-white);
   font-weight: var(--fw-bold);
+  padding-bottom: 0;
 }
 
-.nav-link:hover, .nav-link:focus {
-  color: var(--rose-gold);
+#mainNav .navbar-nav li.nav-item a.nav-link:hover,
+#mainNav .navbar-nav li.nav-item a.nav-link:focus {
+  color: var(--sunflower-yellow);
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link.active {
+  background-color: transparent;
+  border-bottom: 0.5px solid var(--bs-white);
 }
 
 /* Jumbotron */
 .jumbotron-image {
-  background-image: url(assets/img/portfolio/cabin.png);
+  background-image: url('../assets/img/K+J/K+J-50.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -138,4 +180,86 @@ a {
 
 #jumbotron-intro-title {
   font-size: var(--fs-h3);
+}
+
+/* Grid Gallery */
+.full-width-banner {
+  display: flex;
+  gap: 2em;
+  justify-content: space-between;
+}
+
+.grid-container {
+  min-width: 100%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 10em);
+  ;
+  background-color: var(--navy);
+}
+
+.grid-container>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.small-img {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.medium-img {
+  grid-column: span 2;
+  grid-row: span 2;
+  object-position: center 38%;
+}
+
+.large-img {
+  grid-column: span 2;
+  grid-row: span 3;
+}
+
+.x-large-img {
+  grid-column: span 4;
+  grid-row: span 4;
+}
+
+/* Tabs */
+/* Vertical Tabs */
+.nav-pills .nav-link {
+  background-color: var(--bs-white);
+  color: var(--burgundy);
+  border-radius: 0;
+  border: 0.5px solid var(--burgundy);
+  padding: 10px 5em;
+}
+
+.nav-pills .nav-link.active {
+  background-color: var(--navy);
+  color: var(--bs-white);
+}
+
+.tab-content {
+  padding: 0 20px;
+  text-align: left;
+}
+
+.tab-content .tab-title {
+  border-bottom: 2px solid var(--sunflower-yellow);
+  max-width: 6.5em;
+}
+
+.tab-content ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Wedding Details */
+#wedding-details-wrapper {
+  grid-template-columns: 2fr 1fr;
+  border: 0.5px solid #eee;
+  box-shadow: 0 3px 6px #eee;
 }

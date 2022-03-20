@@ -290,13 +290,22 @@ a:hover {
 .parallax {
   /* The image used */
   background-image: url("../assets/img/K+J/K+J-96.jpg");
-
   /* Set a specific height */
   min-height: 400px;
-
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* Registry */
+#registry-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+#registry img {
+  width: 55%;
+  margin: 0 auto;
 }

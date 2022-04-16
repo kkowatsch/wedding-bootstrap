@@ -10,7 +10,7 @@
   --burgundy: #5d0b09;
   --navy: #002855;
   /* Fonts */
-  --font-family: 'Bodoni 72', serif;
+  --font-family: 'Bodoni 72', sans-serif;
   /* Font Weight */
   --fw-bold: 700;
   --fw-semibold: 600;
@@ -37,7 +37,6 @@ h2 {
 h3 {
   font-size: var(--fs-h3);
   font-weight: var(--fw-semibold);
-  border-bottom: 3px solid var(--sunflower-yellow);
 }
 
 h4 {
@@ -61,7 +60,6 @@ body, html {
   font-size: 1em;
   font-weight: var(--fw-normal);
   color: var(--navy);
-  line-height: 1.25rem;
 }
 
 h1, h2 {
@@ -284,7 +282,7 @@ a:hover {
 }
 
 .hotel-link {
-  width: 12.5em;
+  font-size: var(--fs-h5);
 }
 
 .parallax {
@@ -309,3 +307,5 @@ a:hover {
   width: 55%;
   margin: 0 auto;
 }
+
+/* FAQ */

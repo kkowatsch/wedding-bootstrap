@@ -171,7 +171,7 @@ a:hover {
 /* Jumbotron */
 .jumbotron-image {
   background-image: url('../assets/img/K+J/K+J-50.jpg');
-  background-position: center;
+  background-position: center 35%;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;

@@ -16,11 +16,11 @@
   --fw-semibold: 600;
   --fw-normal: normal;
   /* Font Size */
-  --fs-h1: calc(26px + (48 - 26) * ((100vw - 300px) / (1600 - 300)));
-  --fs-h2: calc(24px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
-  --fs-h3: calc(22px + (28 - 22) * ((100vw - 300px) / (1600 - 300)));
-  --fs-h4: calc(20px + (24 - 20) * ((100vw - 300px) / (1600 - 300)));
-  --fs-h5: calc(18px + (20 - 18) * ((100vw - 300px) / (1600 - 300)));
+  --fs-h1: calc(24px + (48 - 24) * ((100vw - 300px) / (1600 - 300)));
+  --fs-h2: calc(22px + (36 - 22) * ((100vw - 300px) / (1600 - 300)));
+  --fs-h3: calc(20px + (28 - 20) * ((100vw - 300px) / (1600 - 300)));
+  --fs-h4: calc(18px + (24 - 18) * ((100vw - 300px) / (1600 - 300)));
+  --fs-h5: calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)));
 }
 
 /* Font Rules */
@@ -117,6 +117,19 @@ a:hover {
   list-style-type: none;
 }
 
+/* General Media Query */
+@media screen and (max-width: 40em) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 60em) {
+  .hide-tablet {
+    display: none;
+  }
+}
+
 /* Navigation */
 .navigation-wrapper {
   flex-wrap: inherit;
@@ -180,13 +193,19 @@ a:hover {
 #jumbotron-intro-name {
   font-family: 'Birthstone Bounce', cursive;
   color: var(--sunflower-yellow);
-  font-size: calc(60px + (100 - 60) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(48px + (100 - 48) * ((100vw - 300px) / (1600 - 300)));
   font-weight: 500;
 }
 
 .jumbotron-support-desc {
   font-weight: var(--fw-bold);
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 40em) {
+  .jumbotron-support-desc {
+    font-size: var(--fs-h3);
+  }
 }
 
 #jumbotron-intro-title {
@@ -204,9 +223,8 @@ a:hover {
   min-width: 100%;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(4, 10em);
-  ;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   background-color: var(--navy);
 }
 
@@ -216,25 +234,43 @@ a:hover {
   object-fit: cover;
 }
 
-.small-img {
-  grid-column: span 1;
-  grid-row: span 1;
+/* Grid Media Queries */
+@media screen and (min-width: 40em) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.medium-img {
-  grid-column: span 2;
-  grid-row: span 2;
-  object-position: center 38%;
-}
+@media screen and (min-width: 60em) {
+  .grid-container {
+    min-width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 10em);
+    background-color: var(--navy);
+  }
 
-.large-img {
-  grid-column: span 2;
-  grid-row: span 3;
-}
+  .small-img {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
 
-.x-large-img {
-  grid-column: span 4;
-  grid-row: span 4;
+  .medium-img {
+    grid-column: span 2;
+    grid-row: span 2;
+    object-position: center 38%;
+  }
+
+  .large-img {
+    grid-column: span 2;
+    grid-row: span 3;
+  }
+
+  .x-large-img {
+    grid-column: span 4;
+    grid-row: span 4;
+  }
 }
 
 /* Tabs */
@@ -289,12 +325,19 @@ a:hover {
   /* The image used */
   background-image: url("../assets/img/K+J/K+J-96.jpg");
   /* Set a specific height */
-  min-height: 400px;
+  min-height: 250px;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
-  background-position: center;
+  background-position: 35% center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* Where to Stay Media Queries */
+@media screen and (min-width: 60em) {
+  .parallax {
+    min-height: 400px;
+  }
 }
 
 /* Registry */

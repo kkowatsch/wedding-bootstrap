@@ -340,8 +340,7 @@ i#jump-to-chevron {
 
 /* Where to Stay */
 #hotel-grid {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 20px;
 }
 
 .info-list {
@@ -353,6 +352,15 @@ i#jump-to-chevron {
   font-size: var(--fs-h5);
 }
 
+/* Where to Stay Media Queries */
+@media screen and (min-width: 40em) {
+  #hotel-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+}
+
+/* Parallax */
 .parallax {
   /* The image used */
   background-image: url("../assets/img/K+J/K+J-96.jpg");
@@ -365,7 +373,7 @@ i#jump-to-chevron {
   background-size: cover;
 }
 
-/* Where to Stay Media Queries */
+/* Parallax Media Queries */
 @media screen and (min-width: 60em) {
   .parallax {
     min-height: 400px;
@@ -373,14 +381,25 @@ i#jump-to-chevron {
 }
 
 /* Registry */
-#registry-grid {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
 #registry img {
   width: 55%;
-  margin: 0 auto;
+}
+
+#registry #registry-grid img {
+    width: 35%;
+}
+
+/* Registry Media Queries */
+@media screen and (min-width: 40em) {
+  #registry-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #registry #registry-grid img {
+      width: 55%;
+  }
+  #registry img {
+    width: 30%;
+  }
 }
 
 /* FAQ */

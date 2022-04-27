@@ -392,6 +392,10 @@ i#jump-to-chevron {
 }
 
 /* Registry */
+#registry-grid {
+  gap: 20px;
+}
+
 #registry img {
   width: 50%;
 }
@@ -404,6 +408,7 @@ i#jump-to-chevron {
 @media screen and (min-width: 40em) {
   #registry-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 0;
   }
 
   #registry #registry-grid img {

@@ -133,7 +133,7 @@ a:hover {
 /* Navigation */
 .navigation-wrapper {
   flex-wrap: inherit;
-  align-items: flex-end;
+  align-items: baseline;
   justify-content: space-between;
   border-bottom: var(--border) var(--bs-white);
   margin-left: var(--df-rl-padding);
@@ -171,6 +171,29 @@ a:hover {
   color: var(--bs-white);
   font-weight: var(--fw-bold);
   padding-bottom: 0;
+}
+
+.nav-btn {
+  padding-left: 15px;
+}
+
+.nav-btn .btn-secondary {
+  color: var(--bs-white);
+  background-color: rgb(0 40 85 / 25%);
+  border-color: var(--bs-white);
+}
+
+.nav-btn .btn-secondary:active {
+  color: var(--sunflower-yellow);
+  background-color: rgb(0 40 85 / 25%);
+  border-color: var(--sunflower-yellow);
+}
+
+.nav-btn .btn-secondary:focus {
+    color: var(--sunflower-yellow);
+    background-color: rgb(0 40 85 / 25%);
+    border-color: var(--sunflower-yellow);
+    box-shadow: 0 0 0 0.25rem rgb(76 91 106 / 50%);
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover,

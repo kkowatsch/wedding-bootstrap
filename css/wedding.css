@@ -174,26 +174,26 @@ a:hover {
 }
 
 .nav-btn {
-  padding-left: 15px;
+  margin-top: 10px;
 }
 
-.nav-btn .btn-secondary {
+.btn-secondary.nav-btn {
   color: var(--bs-white);
   background-color: rgb(0 40 85 / 25%);
   border-color: var(--bs-white);
 }
 
-.nav-btn .btn-secondary:active {
+.btn-secondary.nav-btn:active {
   color: var(--sunflower-yellow);
   background-color: rgb(0 40 85 / 25%);
   border-color: var(--sunflower-yellow);
 }
 
-.nav-btn .btn-secondary:focus {
-    color: var(--sunflower-yellow);
-    background-color: rgb(0 40 85 / 25%);
-    border-color: var(--sunflower-yellow);
-    box-shadow: 0 0 0 0.25rem rgb(76 91 106 / 50%);
+.btn-secondary.nav-btn:focus {
+  color: var(--sunflower-yellow);
+  background-color: rgb(0 40 85 / 25%);
+  border-color: var(--sunflower-yellow);
+  box-shadow: 0 0 0 0.25rem rgb(76 91 106 / 50%);
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover,
@@ -205,6 +205,14 @@ a:hover {
   background-color: transparent;
   border-bottom: 0.5px solid var(--bs-white);
   color: var(--sunflower-yellow);
+}
+
+/* Navigation Media Queries */
+@media screen and (min-width: 992px) {
+  .nav-btn {
+    margin-top: 0;
+    margin-left: 15px;
+  }
 }
 
 /* Jumbotron */
@@ -396,21 +404,31 @@ i#jump-to-chevron {
 
 /* Parallax */
 .parallax {
-  /* The image used */
-  background-image: url("../assets/img/K+J/K+J-96.jpg");
-  /* Set a specific height */
-  min-height: 250px;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: 35% center;
+  background-image: url("../assets/img/K+J/K+J-96-mobile.jpg");
+  min-height: 150px;
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 /* Parallax Media Queries */
+@media screen and (min-width: 576px) {
+  .parallax {
+    min-height: 250px;
+  }
+}
+
 @media screen and (min-width: 40em) {
   .parallax {
-    min-height: 300px;
+    background-image: url("../assets/img/K+J/K+J-96-desktop.jpg");
+    background-position: center;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .parallax {
+    background-attachment: fixed;
+    background-position: 35% center;
   }
 }
 
